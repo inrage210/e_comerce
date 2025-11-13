@@ -16,8 +16,8 @@ class ShapedProductButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: ShapedContainer(
-        width: 80,
-        height: 100,
+        width: 100,
+        height: 130,
         colors: [Colors.white, Colors.white],
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

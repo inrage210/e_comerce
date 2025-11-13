@@ -6,6 +6,7 @@ import 'package:e_comerce/components/text_shape_button.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  // debugPaintSizeEnabled = true;
   runApp(MyApp());
 }
 
@@ -39,16 +40,14 @@ class _HomeScreenState extends State<HomeScreen> {
       // backgroundColor: Colors.amber[100],
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              _buildAppBar(controller: searchController),
-              SizedBox.square(dimension: 20),
-              _buildSlideShow(),
-              SizedBox.square(dimension: 20),
-              CategoriesProduct(),
-            ],
-          ),
+        child: Column(
+          children: [
+            _buildAppBar(controller: searchController),
+            SizedBox.square(dimension: 20),
+            _buildSlideShow(),
+            SizedBox.square(dimension: 20),
+            CategoriesProduct(),
+          ],
         ),
       ),
     );

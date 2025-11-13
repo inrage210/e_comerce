@@ -8,6 +8,7 @@ class CategoriesProduct extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final product = Product.values.map((e) => e.name.toUpperCase()).toList();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -17,24 +18,35 @@ class CategoriesProduct extends StatelessWidget {
           fontWeight: FontWeight.w600,
           color: Colors.black,
         ),
-        GridView.builder(
-          shrinkWrap: true,
-          itemCount: Product.values.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            childAspectRatio: 1,
-          ),
-          itemBuilder: (context, index) {
-            final product = Product.values
-                .map((e) => e.name.toUpperCase())
-                .toList();
-            return ShapedProductButton(
-              namaProduct: product[index].toString(),
+        Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          children: [
+            ShapedProductButton(
+              namaProduct: product[0].toString(),
               onPressed: () {},
-            );
-          },
+            ),
+            ShapedProductButton(
+              namaProduct: product[1].toString(),
+              onPressed: () {},
+            ),
+            ShapedProductButton(
+              namaProduct: product[2].toString(),
+              onPressed: () {},
+            ),
+            ShapedProductButton(
+              namaProduct: product[3].toString(),
+              onPressed: () {},
+            ),
+            ShapedProductButton(
+              namaProduct: product[4].toString(),
+              onPressed: () {},
+            ),
+            ShapedProductButton(
+              namaProduct: product[5].toString(),
+              onPressed: () {},
+            ),
+          ],
         ),
       ],
     );
